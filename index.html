@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Municipalidad Jardín América</title>
+  <link rel="stylesheet" href="css/tp_muni.css" />
+  <script defer src="js/java_muni.js"></script>
+  <script type="module" defer src="js/enviroments.js"></script>
+  <script type="module" defer src="js/auth.js"></script>
+</head>
+<body>
+  <!-- =================== CABECERA / LOGO + RRSS =================== -->
+  <header class="topbar">
+    <div class="brand">
+      <img src="img/logo.muni__png.jpg" alt="Logo Municipalidad" class="logo"/>
+    </div>
+    <div class="social">
+      <a href="https://www.instagram.com/munijardinamericaok/?utm_source=ig_web_button_share_sheet"
+        target="_blank">
+        <img src="img/instagram-logo-png_seeklogo-306452.webp" alt="Instagram" class="social-ico"/>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61554658259668" target="_blank">
+        <img src="img/facebook.webp" alt="Facebook" class="social-ico"/>
+      </a>    
+    </div> 
+  </header>
+    
+  <!-- =================== BARRA DE NAVEGACIÓN =================== -->
+  <nav class="navbar">
+    <a href="#" data-target="inicio" class="navlink active">INICIO</a>
+    <a href="#" data-target="secretarias" class="navlink">SECRETARÍAS</a>
+    <a href="#" data-target="tramite" class="navlink">TRÁMITE</a>
+    <a href="#" data-target="guias" class="navlink">GUÍA</a>
+    <a href="#" data-target="contactos" class="navlink">CONTACTOS</a>
+  </nav>
+
+  <!-- =================== SECCIÓN 1: INICIO =================== -->
+  <section id="inicio" class="seccion">
+    <h2 class="title-lg">BIENVENIDOS</h2>
+    <img src="img/muniinicio.jpg" alt="Portada" class="hero"/>
+    <h1 class="title-xl">GESTIÓN DE OBRAS</h1>
+    <p class="subtitle">Accede a toda la información desde un solo lugar</p>
+
+    <div class="icons">
+      <div>
+        <img src="img/asesoramos.0.jpeg" alt="Asesoramos" class="icon"/>
+        <h3>ASESORAMOS</h3>
+      </div>
+      <div>
+        <img src="img/facil.2.jpeg" alt="Facilitamos" class="icon"/>
+        <h3>FACILITAMOS</h3>
+      </div>
+      <div>
+        <img src="img/acompañamos,1.jpeg" alt="Acompañamos" class="icon"/>
+        <h3>ACOMPAÑAMOS</h3>
+      </div>
+    </div>
+    <div class="horarios">Nos encontramos: lunes a viernes 6:30 am - 12:30 pm</div>
+  </section>
+
+  <!-- =================== SECCIÓN 2: SECRETARÍAS =================== -->
+  <section id="secretarias" class="seccion" hidden>
+    <h2 class="title-lg">SECRETARÍAS</h2>
+    <div class="acordeon">
+      <button class="acordeon-btn">INTENDENCIA</button>
+      <div class="acordeon-contenido">
+        <div class="secretaria-box">
+          <img src="img/intendente.prueba.jpeg" alt="Intendente" class="foto-int"/>
+          <div class="secretaria-info">
+            <h4>CÉSAR DANIEL ARAUJO</h4>
+            <p>César Daniel Araujo asumió como intendente de Jardin America el 8 de diciembre de 2023,
+              tras ser electo en las elecciones del 7 de mayo de ese año.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <button class="acordeon-btn">DIRECCIONES DE OBRAS PRIVADAS</button>
+      <div class="acordeon-contenido">
+        <p>La Dirección de Obras Privadas es el área municipal encargada de controlar y gestionar las construcciones en el ámbito urbano...</p>
+      </div>
+
+      <button class="acordeon-btn">DIRECCIONES DE OBRAS PÚBLICAS</button>
+      <div class="acordeon-contenido">
+        <p>La Dirección de Obras Públicas es responsable de planear, dirigir, coordinar y ejecutar proyectos de infraestructura...</p>
+      </div>
+
+      <button class="acordeon-btn">SERVICIOS PUBLICOS</button>
+      <div class="acordeon-contenido">
+        <img src="img/recoleccion.jpg" alt="recoleccion" class="foto-reco"/>
+      </div>
+    </div>
+    <div class="horarios">Nos encontramos: lunes a viernes 6:30 am - 12:30 pm</div>
+  </section>
+
+  <!-- =================== SECCIÓN 3: TRÁMITE =================== -->
+  <section id="tramite" class="seccion" hidden>
+    <h2 class="title-lg">TRÁMITES (CARGA DE PLANOS)</h2>
+
+    <div class="acordeon">
+      <!-- ------------------- ADMIN ------------------- -->
+      <button class="acordeon-btn" id="btnAdmin">ADMIN / PERSONAL MUNICIPAL</button>
+      <div class="acordeon-contenido" id="contenidoAdmin" style="display:none;">
+        <div id="loginAdmin">
+          <h4>Login Administrador</h4>
+          <form id="formLoginAdmin">
+            <label>Usuario (email):</label>
+            <input type="email" id="usuarioAdmin" required><br><br>
+            <label>Contraseña:</label>
+            <input type="password" id="passwordAdmin" required><br><br>
+            <button type="submit">Ingresar</button>
+          </form>
+        </div>
+        <div id="infoAdmin" style="display:none;">
+          <p>Guía rápida para personal municipal sobre carga y validación. (reemplazar)</p>
+        </div>
+      </div>
+
+      <!-- ------------------- PROFESIONAL ------------------- -->
+      <button class="acordeon-btn" id="btnProf">PROFESIONAL</button>
+      <div class="acordeon-contenido" id="contenidoProf" style="display:none;">
+        <div id="loginProf">
+          <h4>Login Profesional</h4>
+          <form id="formLoginProf">
+            <label>Usuario (email):</label>
+            <input type="email" id="usuarioProf" required><br><br>
+            <label>Contraseña:</label>
+            <input type="password" id="passwordProf" required><br><br>
+            <button type="submit">Ingresar</button>
+          </form>
+        </div>
+        <div id="infoProf" style="display:none;">
+          <p>Requisitos y pasos para profesionales: planos, firmas, adjuntos. (reemplazar)</p>
+        </div>
+      </div>
+
+      <!-- ------------------- CIUDADANO ------------------- -->
+      <button class="acordeon-btn">CIUDADANO</button>
+      <div class="acordeon-contenido">
+        <p>Cómo iniciar tu trámite, seguimiento y notificaciones. (reemplazar)</p>
+      </div>
+    </div>
+
+    <!-- ======== FORMULARIO DE TRÁMITES ======== -->
+    <h3>Cargar nuevo trámite</h3>
+    <form id="form-tramite">
+      <input type="text" id="nombre" placeholder="Nombre trámite" required>
+      <input type="text" id="estado" placeholder="Estado (Pendiente)" required>
+      <input type="date" id="fecha" required>
+      <input type="file" id="archivo" />
+      <button type="submit">Guardar</button>
+    </form>
+
+    <!-- ======== TABLA DE TRÁMITES ======== -->
+    <h3>Listado de trámites</h3>
+    <table id="tabla-tramites">
+      <thead>
+        <tr>
+          <th>ID</th><th>Nombre</th><th>Estado</th><th>Fecha</th><th>Archivo</th><th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="horarios">Nos encontramos: lunes a viernes 6:30 am - 12:30 pm</div>
+  </section>
+
+  <!-- =================== SECCIÓN 4: GUÍA =================== -->
+  <section id="guias" class="seccion" hidden>
+    <h2 class="title-lg">GUÍA Y TRÁMITES PARA TUS OBRAS</h2>
+    <div class="acordeon">
+      <button class="acordeon-btn">GUÍA DE USO</button>
+      <div class="acordeon-contenido">
+        <p>Información para iniciar, seguir y finalizar una obra. (reemplazar)</p>
+      </div>
+      <button class="acordeon-btn">NORMATIVAS Y RECURSOS</button>
+      <div class="acordeon-contenido">
+        <p>Leyes, ordenanzas y recursos descargables. (reemplazar)</p>
+      </div>
+    </div>
+    <div class="guias-imagenes">
+      <img src="img/LOGO.OBRAS.PRIV.jpeg" alt="Guía 1" class="tile"/>
+      <img src="img/LOGO.OBRAS.PUBLI.jpeg" alt="Guía 2" class="tile"/>
+    </div>
+    <div class="horarios">Nos encontramos: lunes a viernes 6:30 am - 12:30 pm</div>
+  </section>
+
+  <!-- =================== SECCIÓN 5: CONTACTOS =================== -->
+  <section id="contactos" class="seccion" hidden>
+    <h2 class="title-lg">CONTÁCTENOS</h2>
+    <img src="img/asesoramos.0.jpeg" alt="Ayuda" class="contact-hero"/>
+    <div class="contact-card">
+      <p class="contact-text">
+        ¿Tienes dudas o recomendaciones?<br/>Contáctenos por:
+      </p>
+      <div class="redes">
+        <img src="img/instagram-logo-png_seeklogo-306452.webp" alt="Instagram" class="social-ico"/>
+        <img src="img/gmail.0.webp" alt="Gmail" class="social-ico"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== FOOTER =================== -->
+  <footer class="footer">
+    Municipalidad Jardín América — Gmail: muni
+  </footer>
+
+  <!-- =================== ESTILOS DE MODAL =================== -->
+  <style>
+    .modal {position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.5); display:flex; justify-content:center; align-items:center; z-index:999;}
+    .modal-content {background:#fff; padding:20px; border-radius:10px; text-align:center;}
+    .modal.success .modal-content {border:2px solid green;}
+    .modal.error .modal-content {border:2px solid red;}
+  </style>
+</body>
+</html>
